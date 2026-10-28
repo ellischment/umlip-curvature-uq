@@ -20,7 +20,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-models = ["mace-torch", "chgnet", "mattersim", "orb-models"]
+models = ["mace-torch", "chgnet", "orb-models"]
 dev = ["pytest>=7"]
 
 [project.scripts]

@@ -48,8 +48,13 @@ training), Orb confidence head, latent-distance UQ, molecules (OMOL-1k-MD).
 python -m venv .venv
 .venv/bin/pip install -e ".[models,dev]"   # .venv\Scripts\pip on Windows
 pytest
-python -m umlip_curvature_uq.run --n 25 --models mace-mp-0 chgnet mattersim-v1 orb-v3
+python -m umlip_curvature_uq.run --n 25 --models mace-mp-0 chgnet orb-v3
 ```
+
+MatterSim-v1 is supported in the code but not in the `models` extra:
+`mattersim` requires `e3nn>=0.5`, while `mace-torch` pins `e3nn==0.4.4`, and on
+Windows it builds from source and needs a C++ compiler. Install it in a separate
+environment and run with `--models mattersim-v1`.
 
 Outputs go to `results/`: `per_model.csv`, `per_material.csv`, `summary.json`
 and `spread_vs_softening.png`. Reference files are cached in `data/`.
