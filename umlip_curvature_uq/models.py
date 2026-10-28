@@ -30,10 +30,12 @@ def _mattersim(device: str) -> Calculator:
 
 def _orb(device: str) -> Calculator:
     from orb_models.forcefield import pretrained
-    from orb_models.forcefield.calculator import ORBCalculator
+    from orb_models.forcefield.inference.calculator import ORBCalculator
 
-    model = pretrained.orb_v3_conservative_inf_omat(device=device, precision="float32-highest")
-    return ORBCalculator(model, device=device)
+    model, adapter = pretrained.orb_v3_conservative_inf_omat(
+        device=device, precision="float32-highest", compile=False
+    )
+    return ORBCalculator(model, adapter, device=device)
 
 
 REGISTRY: dict[str, Callable[[str], Calculator]] = {
