@@ -13,6 +13,11 @@ can stay small while the error does not.
 This repository is a work in progress for an ICOMP 2026 poster. It contains the
 pipeline for testing that hypothesis. **No results are reported yet.**
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/img/umlip-method-dark.svg">
+  <img src="docs/img/umlip-method-light.svg" width="100%" alt="Method in four steps: rebuild DFT force constants, recompute forces with each model on the same displaced cells, measure softening as the slope of model against DFT frequencies, test whether ensemble spread flags strong softening. No results reported yet.">
+</picture>
+
 ## Hypothesis
 
 - Curvature is underestimated with the same sign across several uMLIPs, so
