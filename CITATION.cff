@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "umlip-curvature-uq: does uncertainty quantification detect systematic curvature errors in universal ML interatomic potentials?"
+type: software
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/ellischment/umlip-curvature-uq"
+url: "https://ellischment.ru"
+authors:
+  - family-names: Teplyakova
+    given-names: T.
+    affiliation: "Central University"
+  - family-names: Popova
+    given-names: Vasilisa
+    affiliation: "Central University"
+abstract: >-
+  Pipeline for testing whether spread-based uncertainty between universal
+  machine-learning interatomic potentials detects their shared underestimation
+  of potential-energy surface curvature (phonon softening). Work in progress,
+  no results reported yet.
+keywords:
+  - machine-learning interatomic potentials
+  - uncertainty quantification
+  - phonons
